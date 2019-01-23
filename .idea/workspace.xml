@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="694b02e5-3516-4ef7-9189-9fd23d11cf71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Individual.py" beforeDir="false" afterPath="$PROJECT_DIR$/Individual.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turtleWrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/turtleWrap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/warehouse.py" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PSZT$Projekcik.coverage" NAME="Projekcik Coverage Results" MODIFIED="1548239647443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PSZT$Projekcik.coverage" NAME="Projekcik Coverage Results" MODIFIED="1548241083686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PSZT$Unnamed.coverage" NAME="Projekcik Coverage Results" MODIFIED="1542389449193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -50,8 +45,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="233" />
-          <entry key="Python" value="28296" />
+          <entry key="PLAIN_TEXT" value="250" />
+          <entry key="Python" value="28608" />
         </counts>
       </usages-collector>
     </session>
@@ -61,11 +56,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+            <state relative-caret-position="552">
+              <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -73,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Generation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="1126">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -97,7 +92,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/warehouse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1935">
+            <state relative-caret-position="994">
               <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
@@ -106,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Individual.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="1290">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -118,11 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cargo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -178,8 +170,8 @@
       <find>s</find>
       <find>initialize_cargo_lis</find>
       <find>introduce</find>
-      <find>count</find>
       <find>append</find>
+      <find>count</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -203,8 +195,8 @@
         <option value="$PROJECT_DIR$/Cargo.py" />
         <option value="$PROJECT_DIR$/warehouse.py" />
         <option value="$PROJECT_DIR$/turtleWrap.py" />
-        <option value="$PROJECT_DIR$/Individual.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Individual.py" />
         <option value="$PROJECT_DIR$/Generation.py" />
       </list>
     </option>
@@ -331,11 +323,19 @@
       <option name="project" value="LOCAL" />
       <updated>1548230057965</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="DZIALA PROJEKT XD">
+      <created>1548239900242</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548239900242</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49927008" visible="true" weight="0.16738197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -343,7 +343,7 @@
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.09518072" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32650602" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32409638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,7 +352,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.24216868" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24216868" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -374,7 +374,8 @@
     <MESSAGE value="Poprawne wypelnienie macierzy magazynu" />
     <MESSAGE value="zmiana podejscia" />
     <MESSAGE value="poprawka rysowania" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawka rysowania" />
+    <MESSAGE value="DZIALA PROJEKT XD" />
+    <option name="LAST_COMMIT_MESSAGE" value="DZIALA PROJEKT XD" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -457,25 +458,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cargo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/warehouse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
+        <state relative-caret-position="994">
           <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1126">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Individual.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="1290">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -484,20 +492,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+        <state relative-caret-position="552">
+          <caret line="75" column="39" lean-forward="true" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Generation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>

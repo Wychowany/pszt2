@@ -4,7 +4,7 @@ import copy
 import random
 
 NUMBER_OF_INDIVIDUALS = 100
-
+MUTATION_CHANCE = 10
 
 class Generation:
 
@@ -45,6 +45,7 @@ class Generation:
 
             self.individuals[k].calculate_coverage()
             #self.individuals[k].initialize_cargo_list_with_random_positions(warehouse.CARGO_LIST)
+        self.mutate()
 
 
     def cross_mother_and_father(self, father_individual, mother_individual, individual):
@@ -75,6 +76,11 @@ class Generation:
                 if individual.cargo_can_be_placed(carg):
                     individual.put_cargo_in_matrix(individual.matrix, individual.cargoList[i])
                     carg.inWarehouse = True
+
+    def mutate(self):
+        for i in range(MUTATION_CHANCE):
+            a = random.randrange(0, 100, 1)
+            self.individuals[a].initialize_cargo_list_with_random_positions(warehouse.CARGO_LIST)
 
 
     def sort_population_by_coverage(self):
