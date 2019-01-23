@@ -47,6 +47,20 @@ class TurtleWrapper:
         self.turn_north()
         self.tut.forward(cargo.height * 10)
 
+    def draw_entrance(self):
+        self.tut.penup()
+        self.tut.goto(0, 0)
+        self.turn_east()
+        self.tut.pendown()
+        self.tut.forward(10)
+        self.turn_south()
+        self.tut.forward(10)
+        self.turn_west()
+        self.tut.forward(10)
+        self.turn_north()
+        self.tut.forward(10)
+
+
     def move_down(self):
         if self.previous_key == "UP":
             return False

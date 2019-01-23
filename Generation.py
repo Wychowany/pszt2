@@ -1,6 +1,7 @@
 import Individual
 import warehouse
 import copy
+import random
 
 NUMBER_OF_INDIVIDUALS = 100
 
@@ -31,7 +32,50 @@ class Generation:
         for i in range(0, int(NUMBER_OF_INDIVIDUALS/2)):
             k = int(NUMBER_OF_INDIVIDUALS/2) + i
             self.individuals[k] = Individual.Individual(copy.copy(self.matrix), self.free_space_size)
-            self.individuals[k].initialize_cargo_list_with_random_positions(warehouse.CARGO_LIST)
+
+            # znajdzmy matke i ojca dla osobnika
+            father_index = random.randrange(0, 50, 1)
+            mother_index = random.randrange(0, 50, 1)
+
+            while father_index == mother_index:
+                mother_index = random.randrange(0, 50, 1)
+
+            self.cross_mother_and_father(self.individuals[father_index], self.individuals[mother_index],
+                                         self.individuals[k])
+
+            self.individuals[k].calculate_coverage()
+            #self.individuals[k].initialize_cargo_list_with_random_positions(warehouse.CARGO_LIST)
+
+
+    def cross_mother_and_father(self, father_individual, mother_individual, individual):
+        # print ("#########################################")
+        # print ("FATHER: " + str(len(father_individual.cargoList)))
+        # print ("MOTHER: " + str(len(mother_individual.cargoList)))
+        # print ("#########################################")
+
+
+        for i in range(warehouse.Warehouse.count_number_of_cargos()):
+            placed = False
+            if father_individual.cargoList[i].inWarehouse is True and mother_individual.cargoList[i].inWarehouse is False : ## staramy sie wlozyc ojca
+                placed = individual.cargo_can_be_placed(copy.deepcopy(father_individual.cargoList[i]))
+                if placed is True:
+                    individual.cargoList.append(copy.deepcopy(father_individual.cargoList[i]))
+                    individual.put_cargo_in_matrix(individual.matrix, individual.cargoList[i])
+            elif father_individual.cargoList[i].inWarehouse is False and mother_individual.cargoList[i].inWarehouse is True: ## staramy sie wlozyc matke
+                placed = individual.cargo_can_be_placed(copy.deepcopy(mother_individual.cargoList[i]))
+                if placed is True:
+                    individual.cargoList.append(copy.deepcopy(mother_individual.cargoList[i]))
+                    individual.put_cargo_in_matrix(individual.matrix, individual.cargoList[i])
+
+            if placed is False:
+                carg = copy.deepcopy(father_individual.cargoList[i])
+                carg.randomize_position_of_left_corner()
+                carg.inWarehouse = False
+                individual.cargoList.append(carg)
+                if individual.cargo_can_be_placed(carg):
+                    individual.put_cargo_in_matrix(individual.matrix, individual.cargoList[i])
+                    carg.inWarehouse = True
+
 
     def sort_population_by_coverage(self):
         self.individuals.sort(key=lambda ind: ind.coverage, reverse=True)

@@ -113,10 +113,19 @@ class Warehouse:
         #         y += 1
         #     print("")
 
-    def count_posible_coverage(self):
+    @staticmethod
+    def count_posible_coverage():
         count = 0
         for cargo_type in CARGO_LIST:
                 for _ in range(cargo_type.THIS_TYPE_NUMBER):
                     count += cargo_type.height * cargo_type.width
+
+        return count
+
+    @staticmethod
+    def count_number_of_cargos():
+        count = 0
+        for cargo_type in CARGO_LIST:
+            count += cargo_type.THIS_TYPE_NUMBER
 
         return count

@@ -7,13 +7,15 @@ class Cargo:
     height = None
     position = None
     inWarehouse = False
+    id = None
 
-    def __init__(self, cargo_type):
+    def __init__(self, cargo_type, id):
         self.width = cargo_type.width
         self.height = cargo_type.height
+        self.id = id
 
     def randomize_position_of_left_corner(self):
-        self.position = Point.Point(random.randrange(20, 80, 1), random.randrange(20, 80 , 1))
+        self.position = Point.Point(random.randrange(20, 80, 1), random.randrange(20, 80, 1))
 
 
 class Square1x1:

@@ -5,6 +5,7 @@ import Point
 import Generation
 import copy
 
+ITERATION_NUMBER = 20
 
 class Main:
 
@@ -60,15 +61,17 @@ class Main:
 
     def reproduce(self):
         print("\nReprodukuj")
-        self.population.introduce_new_individuals()
-        self.population.sort_population_by_coverage()
-        self.population.print_all_coverages()
+        for i in range(ITERATION_NUMBER):
+            self.population.introduce_new_individuals()
+            self.population.sort_population_by_coverage()
+            self.population.print_all_coverages()
 
     def print_final_version(self):
         currently_the_best = self.population.individuals[0]
         for cargo in currently_the_best.cargoList:
             if cargo.inWarehouse is True:
                 self.turtleWrapper.draw_cargo(cargo)
+
     def start(self):
         self.screen.onkey(self.exit_program, "q")
         self.screen.onkey(self.up_pressed, "Up")
@@ -79,6 +82,7 @@ class Main:
         self.screen.onkey(self.reproduce, "space")
         self.screen.onkey(self.print_final_version, "f")
         self.screen.listen()
+        self.turtleWrapper.draw_entrance()
         self.screen.mainloop()
 
     def exit_program(self):

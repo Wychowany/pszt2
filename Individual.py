@@ -12,12 +12,13 @@ class Individual:
     def __init__(self, matrix, free_space_size) -> None:
         super().__init__()
         self.matrix = copy.deepcopy(matrix)
+        self.cargoList = []
 
     def initialize_cargo_list_with_random_positions(self, cargo_type_list):
-        self.cargoList = []
+        id = 0
         for cargo_type in cargo_type_list:
                 for _ in range(cargo_type.THIS_TYPE_NUMBER):
-                    cargo = Cargo.Cargo(cargo_type)
+                    cargo = Cargo.Cargo(cargo_type, id)
                     cargo.randomize_position_of_left_corner()
                     self.cargoList.append(cargo)
 
@@ -60,10 +61,10 @@ class Individual:
             if self.check_if_enterance(temporary_matrix, cargo.position.index_x + cargo.height, cargo.position.index_y + j) is True:
                 return True
 
+        return False
 
     def check_if_enterance(self, temporary_matrix, x, y):
         if temporary_matrix[x][y] == warehouse.ENTRANCE:
-            print("\n Znaleziono wejscie")
             return True
         elif temporary_matrix[x][y] == warehouse.FREE_SPACE:
             temporary_matrix[x][y] = warehouse.ALREADY_CHECKED
@@ -71,7 +72,6 @@ class Individual:
                    self.check_if_enterance(temporary_matrix, x, y+1) or self.check_if_enterance(temporary_matrix, x, y-1)
         else:
             return False
-
 
     def put_cargo_in_matrix(self, matrix, cargo):
         for i in range(0, cargo.height):
