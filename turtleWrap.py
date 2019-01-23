@@ -36,7 +36,7 @@ class TurtleWrapper:
 
     def draw_cargo(self, cargo):
         self.tut.penup()
-        self.tut.goto(-(cargo.position.index_y - 50)*10, (cargo.position.index_x - 50) * 10)
+        self.tut.goto((cargo.position.index_y - 50) * 10, -(cargo.position.index_x - 50)*10)
         self.turn_east()
         self.tut.pendown()
         self.tut.forward(cargo.width * 10)
@@ -85,12 +85,6 @@ class TurtleWrapper:
 
     def turn_west(self):
         self.tut.setheading(180)
-
-    def write_hellow_message(self):
-        self.tut.penup()
-        self.tut.goto(0, 50)
-        self.tut.write("Draw the warehouse", False, "left", font=("Arial", 50, "normal"))
-        self.tut.goto(250, 250)
 
     def get_current_position(self):
         return [int(round(self.tut.pos()[0])), int(round(self.tut.pos()[1]))]

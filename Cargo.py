@@ -13,7 +13,7 @@ class Cargo:
         self.height = cargo_type.height
 
     def randomize_position_of_left_corner(self):
-        self.position = Point.Point(random.randrange(0, 95, 1), random.randrange(0, 95, 1))
+        self.position = Point.Point(random.randrange(20, 80, 1), random.randrange(20, 80 , 1))
 
 
 class Square1x1:
