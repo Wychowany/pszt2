@@ -5,7 +5,8 @@ import Point
 import Generation
 import copy
 
-ITERATION_NUMBER = 20
+ITERATION_NUMBER = 10
+
 
 class Main:
 
@@ -55,9 +56,6 @@ class Main:
             self.population.print_all_coverages()
             self.warehouse.debug_warehouse_shape() # debug function
             print("Możliwe pokrycie: " + str(self.warehouse.count_posible_coverage()))
-            # initializing population
-
-### Tu już mamy zainicjalizowana populacje, polosowane są miejsca
 
     def reproduce(self):
         print("\nReprodukuj")

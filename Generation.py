@@ -6,6 +6,7 @@ import random
 NUMBER_OF_INDIVIDUALS = 100
 MUTATION_CHANCE = 10
 
+
 class Generation:
 
     individuals = None
@@ -42,27 +43,19 @@ class Generation:
 
             self.cross_mother_and_father(self.individuals[father_index], self.individuals[mother_index],
                                          self.individuals[k])
-
             self.individuals[k].calculate_coverage()
-            #self.individuals[k].initialize_cargo_list_with_random_positions(warehouse.CARGO_LIST)
         self.mutate()
 
-
     def cross_mother_and_father(self, father_individual, mother_individual, individual):
-        # print ("#########################################")
-        # print ("FATHER: " + str(len(father_individual.cargoList)))
-        # print ("MOTHER: " + str(len(mother_individual.cargoList)))
-        # print ("#########################################")
-
 
         for i in range(warehouse.Warehouse.count_number_of_cargos()):
             placed = False
-            if father_individual.cargoList[i].inWarehouse is True and mother_individual.cargoList[i].inWarehouse is False : ## staramy sie wlozyc ojca
+            if father_individual.cargoList[i].inWarehouse is True and mother_individual.cargoList[i].inWarehouse is False :
                 placed = individual.cargo_can_be_placed(copy.deepcopy(father_individual.cargoList[i]))
                 if placed is True:
                     individual.cargoList.append(copy.deepcopy(father_individual.cargoList[i]))
                     individual.put_cargo_in_matrix(individual.matrix, individual.cargoList[i])
-            elif father_individual.cargoList[i].inWarehouse is False and mother_individual.cargoList[i].inWarehouse is True: ## staramy sie wlozyc matke
+            elif father_individual.cargoList[i].inWarehouse is False and mother_individual.cargoList[i].inWarehouse is True:
                 placed = individual.cargo_can_be_placed(copy.deepcopy(mother_individual.cargoList[i]))
                 if placed is True:
                     individual.cargoList.append(copy.deepcopy(mother_individual.cargoList[i]))
@@ -81,7 +74,6 @@ class Generation:
         for i in range(MUTATION_CHANCE):
             a = random.randrange(0, 100, 1)
             self.individuals[a].initialize_cargo_list_with_random_positions(warehouse.CARGO_LIST)
-
 
     def sort_population_by_coverage(self):
         self.individuals.sort(key=lambda ind: ind.coverage, reverse=True)

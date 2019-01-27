@@ -19,42 +19,42 @@ class Cargo:
 
 
 class Square1x1:
-    THIS_TYPE_NUMBER = 4
+    THIS_TYPE_NUMBER = 25
     width = 1
     height = 1
 
 
 class Square2x2:
-    THIS_TYPE_NUMBER = 6
+    THIS_TYPE_NUMBER = 90
     width = 2
     height = 2
 
 
 class Square5x5:
-    THIS_TYPE_NUMBER = 4
+    THIS_TYPE_NUMBER = 8
     width = 5
     height = 5
 
 
 class Rectangle1x2:
-    THIS_TYPE_NUMBER = 11
+    THIS_TYPE_NUMBER = 80
     width = 1
     height = 2
 
 
 class Rectangle2x1:
-    THIS_TYPE_NUMBER = 2
+    THIS_TYPE_NUMBER = 43
     width = 2
     height = 1
 
 
 class Rectangle2x3:
-    THIS_TYPE_NUMBER = 4
+    THIS_TYPE_NUMBER = 60
     width = 2
     height = 3
 
 
 class Rectangle3x2:
-    THIS_TYPE_NUMBER = 3
+    THIS_TYPE_NUMBER = 40
     width = 3
     height = 2
